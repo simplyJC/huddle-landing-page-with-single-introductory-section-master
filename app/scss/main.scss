@@ -1,0 +1,162 @@
+@use 'reset';
+@use 'font';
+@use 'color';
+
+body{
+    font-family: 'Open Sans', sans-serif ;
+    width: 100%;
+    min-height: 100vh;
+    font-size: 16px;
+    background: url('/images/bg-mobile.svg'), color.$violet;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: grid;
+    align-content: center;
+    align-items: center;
+ 
+
+}
+
+//Design
+.img{
+    max-width: 100%;
+}
+.text-white{
+    color: white;
+}
+.text-white-semi{
+    color: rgb(233, 232, 232);
+}
+
+.text-center{
+    text-align: center;
+}
+//Main Container
+.main-container{
+    max-width: 100%;
+    margin: 1.5rem;
+    display:grid;
+   
+}
+//Header
+.header-logo{
+    align-self: flex-end;
+    width: 40%;
+    margin: 1rem 0; 
+}
+
+//hero section
+.hero-img{
+    margin:1rem 0; 
+}
+
+
+.hero-title{
+    margin: 1rem 0; 
+}
+.hero-content{
+    margin:1rem 0; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.hero-btn__register{
+    margin: 1rem 0;
+    border: none;
+    padding: .7rem 0; 
+    width: 200px;
+    font-family: inherit;
+    font-weight: 700;
+    border-radius: 1.5rem;
+    color: color.$violet; 
+    &:hover{
+        background:color.$soft-magenta; 
+        color: rgb(233, 232, 232);
+        cursor: pointer;
+    }
+}
+
+//Section Social media
+.social-media-icons{
+    display: flex;
+    color: white;
+    margin: 1rem 0;
+    justify-self: center;
+}
+ul{
+    text-decoration: none;
+    list-style: none;
+    display: flex;
+
+
+}
+a{
+    color: rgb(212, 209, 209);
+    &:hover{
+        color: color.$soft-magenta;
+    }
+}
+.fab{
+    margin: 0 .5rem;
+    max-width: 100%;
+}
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center;
+    //margin-top: 1rem;
+ }
+.attribution a { 
+    color: hsl(228, 80%, 80%); 
+}
+@media (min-width: 700px){
+        body{
+            background: url('/images/bg-desktop.svg'),  color.$violet;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        .main-container{
+            grid-template-columns: 1fr 1fr;
+        }
+  
+        .header-logo{
+            width: 12rem;
+            grid-column: span 2;
+        }
+        .main-container{
+            max-width: 80%;
+           justify-self: center;
+        }
+        .hero-img{
+            padding:1rem; 
+        }
+        .hero-title{
+            font-size: 2.2rem;
+            text-align: left;
+            margin-bottom: 2rem;
+        }
+        .hero-content{
+            align-items: flex-start;
+            justify-content: center;
+            margin-left: 2rem;
+            &-text{
+                text-align: left;
+            }
+        }
+
+        .hero-btn__register{
+            margin-top: 2rem;
+            width: 180px;
+        }
+        .social-media-icons{
+            grid-column: span 2;
+            justify-self: flex-end;
+        }
+        
+
+
+}
