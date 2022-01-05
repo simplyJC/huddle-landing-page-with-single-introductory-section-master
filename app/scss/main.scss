@@ -14,6 +14,7 @@ body{
     display: grid;
     align-content: center;
     align-items: center;
+    padding:1rem; 
  
 
 }
@@ -72,6 +73,7 @@ body{
     font-weight: 700;
     border-radius: 1.5rem;
     color: color.$violet; 
+    box-shadow: -2px 5px 10px 2px rgba(64, 3, 100, 0.5);
     &:hover{
         background:color.$soft-magenta; 
         color: rgb(233, 232, 232);
@@ -82,9 +84,36 @@ body{
 //Section Social media
 .social-media-icons{
     display: flex;
-    color: white;
+    //color: rgb(107, 40, 40);
     margin: 1rem 0;
     justify-self: center;
+}
+.border-circle{
+    border: 2px solid rgba(255, 255, 255, 0.9);
+    //background: rgb(0, 153, 255);
+    border-radius:50%;
+   // padding: 1rem;
+    margin: 1rem; 
+    display: flex;
+    align-items: center;
+    &:hover{
+        border: 2px solid color.$soft-magenta;
+    }
+   
+   
+}
+.fa-facebook-f{
+    //border: 1px solid white;
+    padding: 10px 5px;
+}
+.fa-twitter{
+    //border: 1px solid white;
+    padding: 8px 3px;
+}
+.fa-instagram{
+   // border: 1px solid white;
+    padding: 8px 4px;
+    
 }
 ul{
     text-decoration: none;
@@ -94,9 +123,9 @@ ul{
 
 }
 a{
-    color: rgb(212, 209, 209);
+    color: rgba(255, 255, 255, .9);
     &:hover{
-        color: color.$soft-magenta;
+        color: color.$soft-magenta; 
     }
 }
 .fab{
@@ -151,6 +180,7 @@ a{
         .hero-btn__register{
             margin-top: 2rem;
             width: 180px;
+            padding:1rem 0
         }
         .social-media-icons{
             grid-column: span 2;
